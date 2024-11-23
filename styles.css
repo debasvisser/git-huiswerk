@@ -17,7 +17,9 @@ body {
     content:"\0022";
 }
 
-footer:after { content:"\00a9"; }
+footer p::after {
+    content:"\00a9";
+}
 
 
 /* ------------------------------- Base Styles: don't change this!  -------------------------------- */
