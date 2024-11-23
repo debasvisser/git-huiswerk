@@ -9,8 +9,15 @@ body {
     color: white;
 }
 
+.compliment p::before {
+    content:"\0022";
+}
 
+.compliment p::after {
+    content:"\0022";
+}
 
+footer:after { content:"\00a9"; }
 
 
 /* ------------------------------- Base Styles: don't change this!  -------------------------------- */
