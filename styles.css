@@ -21,6 +21,35 @@ footer p::after {
     content:"\00a9";
 }
 
+.highlight {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.highlight::after {
+    content: "dit is een latijns woord";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: hsl(29, 100%, 47%);
+    color: #FFF;
+    border-radius: 5px;
+
+    /*dit heb ik gevonden wat een pijl zou moeten geven maar dat doet het niet*/
+    /*border: 10px solid #000;*/
+    /*border-color: transparent transparent black transparent;*/
+
+    padding: 5px 10px;
+    white-space: nowrap;
+    display: none;
+}
+
+.highlight:hover::after {
+    display: block;
+}
+
 
 /* ------------------------------- Base Styles: don't change this!  -------------------------------- */
 
