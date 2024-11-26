@@ -21,6 +21,13 @@ footer p::after {
     content:"\00a9";
 }
 
+/*dit heb ik gevonden wat een pijl zou moeten geven maar dat doet het niet*/
+/*border: 10px solid #000;*/
+/*border-color: transparent transparent black transparent;*/
+
+/*border-bottom: 10px solid orange;*/
+/*border-left: 10px solid transparent;*/
+
 .highlight {
     position: relative;
     display: inline-block;
@@ -36,20 +43,33 @@ footer p::after {
     background: hsl(29, 100%, 47%);
     color: #FFF;
     border-radius: 5px;
-
-    /*dit heb ik gevonden wat een pijl zou moeten geven maar dat doet het niet*/
-    /*border: 10px solid #000;*/
-    /*border-color: transparent transparent black transparent;*/
-
     padding: 5px 10px;
     white-space: nowrap;
     display: none;
+    margin: 2px;
 }
 
 .highlight:hover::after {
     display: block;
 }
 
+.highlight::before {
+    content: '';
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid hsl(29, 100%, 47%);
+    display: none;
+}
+
+.highlight:hover::before {
+    display: block;
+}
 
 /* ------------------------------- Base Styles: don't change this!  -------------------------------- */
 
